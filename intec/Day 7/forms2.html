@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    Select a fruit and click the button:
+    <select id="mySelect">
+        <option>Apple</option>
+        <option>Orange</option>
+        <option>Pineapple</option>
+        <option>Banana</option>
+    </select>
+
+    <button type="button" onclick="myFunction()">Display index</button>
+
+    <script>
+        function myFunction() {
+            var choice = document.getElementById("mySelect").selectedIndex;
+            var y = document.getElementById("mySelect").options;
+            alert("Index: " + y[choice].index + " is " + y[choice].text);
+        }
+    </script>
+
+</body>
+
+</html>
+</body>
+
+</html>

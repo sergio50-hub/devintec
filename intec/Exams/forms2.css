@@ -1,0 +1,108 @@
+body {
+    background-color: #e87d7d;
+}
+
+.header {
+    padding: 1px;
+    background: #1abc9c;
+    color: white;
+    font-size: 50px;
+    padding-left: 25%;
+    letter-spacing: 100%;
+    font-family: 'Sriracha', cursive;
+    font-size: 55px;
+
+}
+
+.flex-container {
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    align-items: flex-end;
+    letter-spacing: 30px;
+
+}
+
+.infos {
+    margin: auto;
+    width: 48%;
+    border: 3px solid white;
+    padding: 25px;
+    color: white;
+    text-align: center;
+    margin-right: 370px;
+
+
+
+}
+
+.commande {
+    margin: auto;
+    width: 48%;
+    border: 3px solid white;
+    padding: 25px;
+    color: white;
+    line-height: 2.2;
+    text-align: center;
+
+
+}
+
+.other {
+    margin: auto;
+    width: 48%;
+    border: 3px solid white;
+    padding: 25px;
+    color: white;
+    line-height: 2.5;
+    text-align: center;
+
+}
+
+.button1 {
+    width: 200px;
+    margin-left: 45%;
+    Border: none;
+
+}
+
+.nom {
+    margin-left: 25px;
+
+}
+
+.Firstname {
+    margin-left: 22px;
+}
+
+.phone {
+    margin-left: 18px;
+}
+
+.email {
+    margin-left: 22px;
+}
+
+.imageinfos {
+    margin-left: 40px;
+    text-align: center;
+
+
+}
+
+.imagecommande {
+    margin-left: 45px;
+}
+
+.imageother {
+    margin-left: 90px;
+}
+
+.recap {
+    margin: auto;
+    width: 48%;
+    border: 3px solid white;
+    padding: 25px;
+    color: white;
+
+}

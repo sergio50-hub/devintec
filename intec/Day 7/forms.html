@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3 Balls or Nothing</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+    <script>
+        function buttonClicked() {
+            const lastname = document.getElementById('lastname').value;
+            document.getElementById('nameLabel').innerHTML = lastname;
+
+            const Firstname = document.getElementById('Firstname').value;
+            document.getElementById('FirstnameLabel').innerHTML = Firstname;
+
+            const phone = document.getElementById('phone').value;
+            document.getElementById('phoneLabel').innerHTML = phone;
+
+            const email = document.getElementById('email').value;
+            document.getElementById('emailLabel').innerHTML = email;
+
+
+
+            var e = document.getElementById("parfums1");
+            var parfums1 = e.options[e.selectedIndex].value;
+
+            var f = document.getElementById("parfums2");
+            var parfums2 = f.options[f.selectedIndex].value;
+
+            var g = document.getElementById("parfums3");
+            var parfums3 = g.options[g.selectedIndex].value;
+
+            var parfumtotal = Number(parfums1) + Number(parfums2) + Number(parfums3);
+
+
+            if (parfumtotal > 3) {
+                alert("Maximum 3 boules !!!");
+
+            }
+
+            let parfumReca = '';
+
+            const vanilleChecked = document.getElementById('Vanille').checked;
+
+            if (vanilleChecked == true) {
+                parfumReca += 'Vanille : ' + parfums1 + ',';
+            }
+
+            const chocolatChecked = document.getElementById('Chocolat').checked;
+
+            if (chocolatChecked == true) {
+                parfumReca += 'Chocolat : ' + parfums2 + ',';
+            }
+
+            const mokaChecked = document.getElementById('Moka').checked;
+
+
+            if (mokaChecked == true) {
+                parfumReca += 'Moka : ' + parfums3 + ',';
+            }
+
+
+            document.getElementById('ParfumLabel').innerHTML = parfumReca;
+
+
+            const cornetChecked = document.getElementById('Cornet').checked;
+
+
+            if (cornetChecked == true) {
+                document.getElementById('FormatLabel').innerHTML = 'Cornet'
+
+            }
+            const galetteChecked = document.getElementById('Galette').checked;
+
+            if (galetteChecked == true) {
+                document.getElementById('FormatLabel').innerHTML = 'Galette'
+
+            }
+            const petitpotChecked = document.getElementById('PetitPot').checked;
+
+            if (petitpotChecked == true) {
+                document.getElementById('Format3Label').innerHTML = 'Petit Pot'
+
+
+            }
+            const cremeChecked = document.getElementById('Crème').checked;
+
+            if (cremeChecked == true) {
+                document.getElementById('CrèmeLabel').innerHTML = 'Crème fraîche'
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+
+
+    <style>
+        body {
+            background-color: #e87d7d;
+
+
+
+        }
+
+
+        .header {
+            padding: 1px;
+            background: #1abc9c;
+            color: white;
+            font-size: 50px;
+            padding-left: 25%;
+            letter-spacing: 100%;
+            font-family: 'Sriracha', cursive;
+            font-size: 55px;
+
+
+
+
+
+        }
+
+        .flex-container {
+            display: flex;
+            height: 70px;
+            justify-content: center;
+            align-items: flex-end;
+            letter-spacing: 30px;
+
+        }
+
+        .infos {
+
+            width: 48%;
+            border: 3px solid #73AD21;
+            justify-content: center;
+            align-items: flex-end;
+            margin-left: 100px;
+
+
+
+
+        }
+
+        .commande {
+            margin: auto;
+            width: 48%;
+            border: 3px solid white;
+            padding: 25px;
+            color: white;
+            line-height: 2.2;
+        }
+
+        .other {
+            margin: auto;
+            width: 48%;
+            border: 3px solid white;
+            padding: 25px;
+            color: white;
+            line-height: 2.5;
+
+        }
+
+        .button1 {
+            width: 200px;
+            margin-left: 45%;
+            Border: none;
+
+        }
+
+        .nom {
+            margin-left: 25px;
+
+        }
+
+        .Firstname {
+            margin-left: 7px;
+        }
+
+        .phone {
+            margin-left: -10px;
+        }
+
+        .email {
+            margin-left: 25px;
+        }
+
+        .imageinfos {
+            margin-left: 90px;
+
+        }
+
+        .imagecommande {
+            margin-left: 90px;
+        }
+
+        .imageother {
+            margin-left: 90px;
+        }
+
+        .recap {
+            margin: auto;
+            width: 48%;
+            border: 3px solid white;
+            padding: 25px;
+            color: white;
+        }
+    </style>
+
+
+
+    <div class="header"> <img src="kidglace.jpg" alt="kidglace" class="img-fluid">
+        <img src="3bon.png" alt="3bon" class="img-fluid">
+        <img src="icecream2.jpg" alt="icecream2" class="img-fluid">
+
+
+
+
+        <p> When Ice-Cream comes true ! </p>
+
+
+    </div>
+
+    </div>
+    <div class="infos">
+
+        <div class="imageinfos"><img src="cornet.png" width=75></div>
+
+        <h2>Vos Informations</h2>
+
+
+
+        <p>
+            <div class="nom"><label>Nom
+                    <input id="lastname" type="text" name="lastname" required>
+                </label></div>
+
+        </p>
+
+        <p>
+            <div class="Firstname"><Label>Prénom
+                    <input id="Firstname" type="text" name="Firstname" required>
+                </Label></div>
+
+        </p>
+        <p>
+            <div class="phone"> <Label>Téléphone
+                    <input id="phone" type="text" name="phone" required>
+                </Label></div>
+
+        </p>
+
+        <p>
+            <div class="email"><Label>Email
+                    <input id="email" type="text" name="email" required>
+                </Label></div>
+
+        </p>
+
+
+
+
+
+    </div>
+
+    <div class="commande">
+        <div class="imagecommande"><img src="cup.png" width=100></div>
+        <h2>Votre Commande</h2>
+
+        <fieldset>
+            <legend>Parfums</legend>
+
+            <p><label> <input type="checkbox" name="Parfums" id="Vanille"> Vanille </label></p>
+            <select id="parfums1">
+
+                <option value="0">Aucun</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+
+
+            </select>
+
+            <p><label> <input type="checkbox" name="Parfums" id="Chocolat"> Chocolat </label></p>
+            <select id="parfums2">
+                <option value="0">Aucun</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+
+            </select>
+            <p><label> <input type="checkbox" name="Parfums" id="Moka"> Moka </label></p>
+            <select id="parfums3">
+                <option value="0">Aucun</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+
+            </select>
+
+            <br>
+
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Format</legend>
+            <p><label> <input type="radio" id="Cornet" name="radio" value="Cornet"> Cornet </label></p>
+            <p><label> <input type="radio" id="Galette" name="radio" value="Galette"> Galette </label></p>
+            <p><label> <input type="radio" id="PetitPot" name="radio" value="PetitPot"> Petit Pot </label></p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Extras</legend>
+            <p><label> <input type="checkbox" id="Crème"> Crème Fraîche </label></p>
+
+        </fieldset>
+    </div>
+
+    <div class="other">
+
+        <div class="imageother"><img src="van.png" width=220></div>
+        <h2>Date d'enlèvement</h2>
+
+
+        <input type="datetime-local" name="pickup_time">
+
+
+        <h2 style='margin-top: 0.5em;'>Moyen de Paiement</h2>
+
+
+        <fieldset>
+
+            <p><label> <input type="radio" name="moyen de paiement" value="Carte de Crédit"> Carte de Crédit
+                </label>
+            </p>
+            <p><label> <input type="radio" name="moyen de paiement" value="Carte Bancaire"> Carte Bancaire </label>
+            </p>
+            <p><label> <input type="radio" name="moyen de paiement" value="Cash"> Cash </label></p>
+
+        </fieldset>
+    </div>
+    <br>
+    <div class="recap">
+        <h3>Récapitulatif de votre commande</h3>
+        <p id="Récapitulatif de votre commande"></p>
+
+        <p id="nameLabel"></p>
+        <p id="FirstnameLabel"></p>
+        <p id="phoneLabel"></p>
+        <p id="emailLabel"></p>
+        <p id="ParfumLabel"></p>
+        <p id="FormatLabel"></p>
+        <p id="Format2Label"></p>
+        <p id="Format3Label"></p>
+        <p id="CrèmeLabel"></p>
+
+    </div>
+
+    <br>
+
+    <div class="button1">
+
+
+        <input type="submit" onclick="buttonClicked()" class="btn btn-info" value="Submit Button">
+
+
+
+
+        <div class="flex-container">
+            <i class="fab fa-facebook" style="font-size:50px;"></i>
+            <i class="fab fa-instagram" style="font-size:50px;"></i>
+            <i class="fab fa-twitter" style="font-size:50px;"></i>
+            <i class="fab fa-linkedin-in" style="font-size:50px;"></i>
+
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
